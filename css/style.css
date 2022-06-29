@@ -1,0 +1,94 @@
+html {
+    box-sizing: border-box
+  }
+  * {
+    box-sizing: inherit
+  }
+
+  .game__body { 
+    height: 100vh;
+    display: flex;
+    background-color: var(--background-color);
+  }
+
+  :root {
+      --font-color:  #000;
+      --background-color:#c0c0c0;
+      --main-white: #ffff;
+  }
+
+  .card__img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .card__game {
+    width: 1384px;
+    height: 1118px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .back__card,
+  .front__card {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    pointer-events: none;
+  }
+
+  .front__card { 
+    background-image: url(/img/photo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .back__card {
+    background-color: var(--font-color);
+    color: var(--main-white);
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .back__card{
+    transform: rotateY(180deg);
+  }
+
+  .card__wrapper {
+    width: calc(21% - 10px);
+    height: calc(33.333% - 10px);
+    margin: 5px;
+    position: relative;
+    border: 2px solid var(--font-color);
+    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: transform .5s;
+  }
+
+  .card__wrapper:active {
+     transform: scale(0.97);
+    transition: transform .2s;
+  }
+
+  .card__wrapper.flip {
+    transform: rotateY(180deg);
+  }
+
+  .card__wrapper:not(:last-child) {
+    margin-right: 33px;
+    margin-bottom: 15px;
+  }
+
+  .hide {
+      display: none;
+  }
+
+  .show {
+      display: block;
+  }
