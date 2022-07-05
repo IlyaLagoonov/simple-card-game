@@ -22,12 +22,10 @@ html {
     height: 100%;
   }
 
-  .card__game {
-    width: 1384px;
-    height: 1118px;
+   .card__game {
+    width: 1645px;
     margin: auto;
     display: flex;
-    flex-wrap: wrap;
   }
 
   .back__card,
@@ -60,8 +58,8 @@ html {
   }
 
   .card__wrapper {
-    width: calc(21% - 10px);
-    height: calc(33.333% - 10px);
+    width: 225px;
+    height: 225px;
     margin: 5px;
     position: relative;
     border: 2px solid var(--font-color);
